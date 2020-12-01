@@ -60,7 +60,7 @@ const App = () => {
     if (!cnt1 || !cnt2) {
       setErrorMessage("Name is not alphanumeric");
       return;
-    } else if (!ValidateEmail(address)) {
+    } else if (address.includes("@")=== false) {
       setErrorMessage("Email must contain @");
       return;
     }
