@@ -62,7 +62,7 @@ const App = () => {
       return;
     }
 
-    if (!(/[a-z ][0-9]/i.test(name))) {
+    if (!cnt1 || !cnt2) {
       setErrorMessage("Name is not alphanumeric");
       return;
     } 
