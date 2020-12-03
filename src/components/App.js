@@ -12,17 +12,17 @@ const App = () => {
       password: ""
     }
   ]);
-  function ValidateEmail(mail) {
-    if (
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-        mail
-      )
-    ) {
-      return true;
-    }
+  // function ValidateEmail(mail) {
+  //   if (
+  //     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+  //       mail
+  //     )
+  //   ) {
+  //     return true;
+  //   }
 
-    return false;
-  }
+  //   return false;
+  // }
   const handleclick = () => {
     let main = input[0];
     console.log(main);
@@ -62,7 +62,7 @@ const App = () => {
       return;
     }
 
-    if (!cnt1 || !cnt2) {
+    if (!(/[a-z ][0-9]/i.test(name))) {
       setErrorMessage("Name is not alphanumeric");
       return;
     } 
