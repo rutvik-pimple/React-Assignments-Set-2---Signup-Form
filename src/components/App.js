@@ -57,14 +57,15 @@ const App = () => {
       }
     }
 
-    if (!cnt1 || !cnt2) {
-      setErrorMessage("Name is not alphanumeric");
-      return;
-    } 
     if (address.includes("@")=== false) {
       setErrorMessage("Email must contain @");
       return;
     }
+
+    if (!cnt1 || !cnt2) {
+      setErrorMessage("Name is not alphanumeric");
+      return;
+    } 
 
     if (isNaN(main["phone"])) {
       setErrorMessage("Phone Number must contain only numbers");
